@@ -2,49 +2,6 @@
 
 A Serverless starter that adds ES7 syntax, serverless-offline, environment variables, and unit test support. Part of the [Serverless Stack](http://serverless-stack.com) guide.
 
-## Service info
-
-Service Information
-service: wir-app-api
-stage: prod
-region: eu-central-1
-stack: wir-app-api-prod
-resources: 35
-api keys:
-  None
-endpoints:
-  POST - https://wk6ibie4i3.execute-api.eu-central-1.amazonaws.com/prod/weeks
-  GET - https://wk6ibie4i3.execute-api.eu-central-1.amazonaws.com/prod/weeks/{id}
-  GET - https://wk6ibie4i3.execute-api.eu-central-1.amazonaws.com/prod/weeks
-  PUT - https://wk6ibie4i3.execute-api.eu-central-1.amazonaws.com/prod/weeks/{id}
-  DELETE - https://wk6ibie4i3.execute-api.eu-central-1.amazonaws.com/prod/weeks/{id}
-functions:
-  create: wir-app-api-prod-create
-  get: wir-app-api-prod-get
-  list: wir-app-api-prod-list
-  update: wir-app-api-prod-update
-  delete: wir-app-api-prod-delete
-layers:
-  None
-
-
-## Test the Service
-
-npx aws-api-gateway-cli-test \
---username='admin@example.com' \
---password='Passw0rd!' \
---user-pool-id='eu-central-1_TqfCqi4mt' \
---app-client-id='2pugu59ihm0vdrr5h99qa47dbs' \
---cognito-region='eu-central-1' \
---identity-pool-id='eu-central-1:a2e00227-a001-43d9-a310-71b7f98be639' \
---invoke-url='https://wk6ibie4i3.execute-api.eu-central-1.amazonaws.com/prod' \
---api-gateway-region='eu-central-1' \
---path-template='/weeks' \
---method='POST' \
---body='{"week": "15.2019","content":"hello world","attachment":"hello.jpg"}'
-
-
-
 [Serverless Node.js Starter](https://github.com/AnomalyInnovations/serverless-nodejs-starter) uses the [serverless-webpack](https://github.com/serverless-heaven/serverless-webpack) plugin, [Babel](https://babeljs.io), [serverless-offline](https://github.com/dherault/serverless-offline), and [Jest](https://facebook.github.io/jest/). It supports:
 
 - **ES7 syntax in your handler functions**
